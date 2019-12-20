@@ -1,0 +1,41 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "build",
+            "command": "cmake -DCMAKE_BUILD_TYPE=Debug ../ && make",
+            
+            "options": {
+                "cwd": "${workspaceRoot}/build"
+            },
+
+            "windows":{
+                "options": {
+                    "shell": {
+                        "executable": "bash.exe",
+                        "args": ["-c"]
+                    }
+                }
+            }
+        },
+        {
+            "type": "shell",
+            "label": "clean",
+            "command": "rm -r *.*",
+            
+            "options": {
+                "cwd": "${workspaceRoot}/build"
+            },
+
+            "windows":{
+                "options": {
+                    "shell": {
+                        "executable": "bash.exe",
+                        "args": ["-c"]
+                    }
+                }
+            }
+        }
+    ],
+    "version": "2.0.0"
+}

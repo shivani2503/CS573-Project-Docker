@@ -1,0 +1,42 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "PDFL-Parser",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/mnt/c/Users/shivi/Desktop/PDFL-Parser/build/PDFL-Parser",
+            "args": [],
+            "stopAtEntry": true,
+            "cwd": "/mnt/c/Users/shivi/Desktop/PDFL-Parser/build",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+
+            "windows": {
+                "pipeTransport": {
+                    "pipeCwd": "",
+                    "pipeProgram": "c:\\windows\\sysnative\\bash.exe",
+                    "pipeArgs": ["-c"],
+                    "debuggerPath": "/usr/bin/gdb"
+                },
+                "sourceFileMap": {
+                    "/mnt/c": "${env:systemdrive}/",
+                    "/usr" : "C:\\Users\\shivi\\AppData\\Local\\Packages\\CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc\\LocalState\\rootfs\\usr"
+                }
+            },
+            "preLaunchTask": "build"
+        }
+    ]
+}
